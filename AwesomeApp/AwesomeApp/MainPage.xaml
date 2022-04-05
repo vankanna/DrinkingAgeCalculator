@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AwesomeApp.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="DeepPink" Padding="24" CornerRadius="0">
+            <Label Text="When can I legally Buy Alcohol?" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <Label Text="When is your birthday?" FontSize="18"/>
+        <DatePicker x:Name="myDatePicker" />
+        <Picker x:Name="picker"
+        Title="Select a Country"
+        TitleColor="Red">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>USA</x:String>
+                    <x:String>South Korea</x:String>
+                    <x:String>Japan</x:String>
+                    <x:String>Germany</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button x:Name="myButton"
+                HeightRequest="50"
+                Clicked="myButton_Clicked"
+                Text="Calculate" />
+        
+        <Label x:Name="Message" FontSize="18" Padding="30,10,30,10" Text="" />
+
+
+    </StackLayout>
+
+</ContentPage>
